@@ -1,0 +1,12 @@
+.logo {
+  display: flex;
+  align-items: center;
+
+  &__img {
+    width: 46px;
+    height: 46px;
+    object-fit: cover;
+    object-position: top;
+    border-radius: 50%;
+  }
+}

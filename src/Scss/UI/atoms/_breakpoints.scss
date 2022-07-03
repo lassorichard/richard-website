@@ -1,0 +1,23 @@
+// Breakpoints mixin
+
+// Example case = .class { @include bp(sm) { styles... } }
+
+$bp-sm: 360px;
+$bp-md: 768px;
+$bp-lg: 1024px;
+$bp-xl: 1440px;
+
+$bps: (
+  'sm': $bp-sm,
+  'md': $bp-md,
+  'lg': $bp-lg,
+  'xl': $bp-xl
+);
+
+@mixin bp($media) {
+  $min-width-bp: (map-get($bps, $media) or $media);
+
+  @media only screen and (min-width: $min-width-bp) {
+    @content;
+  }
+}
