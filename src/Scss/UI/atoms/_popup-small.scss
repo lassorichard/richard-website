@@ -1,0 +1,14 @@
+
+.popup-small {
+  transform: translateX(-50%);
+  animation: slide-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+  background: $cw;
+  color: $cb;
+  display: inline-block;
+  position: absolute;
+  bottom: 5vh;
+  left: 0;
+  right: 0;
+  padding: 10px 20px;
+  text-align: center;
+}

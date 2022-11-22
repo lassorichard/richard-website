@@ -1,11 +1,16 @@
-import { Background } from "../UI/Atoms/Background";
 import { Hero } from "../UI/Organisms/Hero";
+import { Button } from "../UI/Atoms/Button";
 
 export const Home = () => {
   return (
     <>
-      <Background />
       <Hero />
+      <a href="https://google.com">
+          <Button
+            text={'Budget Project'}
+            type={'primary'}
+          />
+        </a>
     </>
   )
 }

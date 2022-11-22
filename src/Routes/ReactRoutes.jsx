@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { Home } from '../Components/Pages/Home';
+import { Budget } from '../Components/Pages/Budget';
 import { Header } from '../Components/UI/Organisms/Header';
 
 export const ReactRoutes = () => {
@@ -9,8 +10,8 @@ export const ReactRoutes = () => {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          {/* <Route exact path="/nosotros" element={<Nosotros />} />
-          <Route exact path="/soy-emprendedor" element={<SoyEmprendedor />} />
+          <Route exact path="/budget" element={<Budget />} />
+          {/* <Route exact path="/soy-emprendedor" element={<SoyEmprendedor />} />
           <Route exact path="/soy-estudiante" element={<SoyEstudiante />} />
           <Route exact path="/contacto" element={<Contacto />} />
           <Route exact path="/terminos-condiciones" element={<TerminosCondiciones />} />

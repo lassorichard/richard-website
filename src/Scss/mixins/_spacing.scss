@@ -1,0 +1,17 @@
+@mixin spacer($spacing-maps, $property, $variant, $default-spacing: 'sm') {
+  @each $bp, $value in (map-get($spacing-maps, $variant)) {
+    @if $default-spacing == $bp {
+      #{$property}: $value;
+    }
+
+    @else {
+      @include bp(#{$bp}) {
+        #{$property}: $value;
+      }
+    }
+  }
+}
+
+@mixin spacer-component($variant, $padding-orientation: 'block') {
+  @include spacer($spacing-components, 'padding-' + $padding-orientation, $variant);
+}
