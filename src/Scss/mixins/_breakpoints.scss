@@ -1,0 +1,7 @@
+@mixin bp($media) {
+  $min-width-bp: (map-get($bps, $media) or $media);
+
+  @media only screen and (min-width: $min-width-bp) {
+    @content;
+  }
+}

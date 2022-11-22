@@ -1,21 +1,36 @@
 // Base
 @import './base/reset';
 
+
+// Variables
+@import './variables/breakpoints';
+@import './variables/header';
+@import './variables/spacing';
+
+// Mixins
+@import './mixins/breakpoints';
+@import './mixins/spacing';
+
+// Animations
+@import './animations/animations';
+
 // Atoms
-@import './UI/atoms/breakpoints';
 @import './UI/atoms/colors';
 @import './UI/atoms/typography';
 @import './UI/atoms/container';
 @import './UI/atoms//background';
 @import './UI/atoms/switch-button';
+@import './UI/atoms/button';
+@import './UI/atoms/popup-small';
 
 // Molecules
 @import './UI/molecules/logo';
+@import './UI/molecules/text-button';
 
 // Organisms
 @import './UI/organisms//header';
-@import './UI/organisms//calculator';
-@import './UI/organisms//calculator-device';
+@import './UI/organisms//hero';
 
 // Pages
 @import './pages/home';
+@import './pages/prompt';

@@ -1,0 +1,17 @@
+// Spacing between components
+$spacing-components-wrapper: (
+  'sm': 64px,
+  'md': 80px,
+  'lg': 112px
+);
+
+$spacing-components-wrapper-empty-value: (
+  'sm': 0,
+  'md': 0,
+  'lg': 0
+);
+
+$spacing-components: (
+  'wrapper': $spacing-components-wrapper,
+  'empty-value': $spacing-components-wrapper-empty-value
+);

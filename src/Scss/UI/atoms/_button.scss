@@ -1,0 +1,26 @@
+.btn {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: none;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: $font-weight-semibold;
+  padding: 15px 20px;
+  text-decoration: none;
+  transition: ease .2s;
+
+  &:hover, &:active {
+    opacity: 0.8;
+  }
+
+  &--primary {
+    background: $cw;
+    color: $cb;
+  }
+
+  &--secondary {
+    color: $cg1;
+    font-weight: $font-weight-light;
+  }
+}
