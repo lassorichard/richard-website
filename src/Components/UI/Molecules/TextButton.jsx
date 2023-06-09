@@ -1,4 +1,3 @@
-import React from 'react'
 import { Heading1 } from '../Atoms/Heading1'
 import { Paragraph } from '../Atoms/Paragraph'
 
