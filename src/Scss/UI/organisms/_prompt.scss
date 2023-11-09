@@ -1,0 +1,17 @@
+.prompt {
+  border-radius: 20px;
+  box-shadow: 4px 4px 10px -4px rgba(0,0,0,0.75);
+  margin: $header-height 20px 0;
+
+  @include spacer-component(wrapper);
+
+  &__heading {
+    padding-bottom: 24px;
+  }
+
+  &__form {
+    .input-text {
+      margin-bottom: 24px;
+    }
+  }
+}
