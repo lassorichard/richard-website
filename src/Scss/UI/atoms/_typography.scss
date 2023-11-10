@@ -10,6 +10,30 @@ $font-weight-regular: 400;
 $font-weight-semibold: 600;
 $font-weight-bold: 700;
 
+// Font Size
+:root {
+  --font-size-h1: 40px;
+  --font-size-h2: 32px;
+  --font-size-h3: 28px;
+  --font-size-h4: 24px;
+  --font-size-h5: 20px;
+
+  --font-size-body-large: 18px;
+  --font-size-body-regular: 16px;
+  --font-size-body-small: 12px;
+  --font-size-eyebrow: 16px;
+
+  @include bp(md) {
+    --font-size-h1: 72px;
+    --font-size-h2: 56px;
+    --font-size-h3: 48px;
+    --font-size-h4: 32px;
+    --font-size-h5: 24px;
+  }
+}
+
+// Font sizes
+
 body {
   font-family: $font-source;
 }
@@ -24,13 +48,14 @@ body {
 
 .heading-1 {
   color: $cw;
-  font-size: 42px;
-  font-weight: $font-weight-light;
+  font-size: var(--font-size-h1);
+  font-weight: $font-weight-regular;
+  line-height: 1.2;
 }
 
 .heading-2 {
   color: $cw;
-  font-size: 36px;
+  font-size: var(--font-size-h2);
   font-weight: $font-weight-light;
 }
 

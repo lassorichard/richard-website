@@ -1,13 +1,33 @@
 .container {
-  margin: 0 auto;
-  max-width: 360px;
-  padding-inline: 25px;
+  --columns: 4;
+  --gutter: 12px;
+  --margin-inline: 12px;
+
+  column-gap: var(--gutter);
+  display: grid;
+  grid-template-columns: repeat(var(--columns), 1fr);
+  margin: 0 var(--margin-inline);
+
+  @include bp(sm) {
+    --columns: 6;
+    --gutter: 12px;
+    --margin-inline: 12px;
+  }
 
   @include bp(md) {
-    max-width: 1024px;
+    --columns: 8;
+    --gutter: 16px;
+    --margin-inline: 32px;
+  }
+
+  @include bp(lg) {
+    --columns: 12;
+    --gutter: 28px;
+    --margin-inline: 80px;
   }
 
   @include bp(xl) {
-    max-width: 1440px;
+    --margin-inline: auto;
+    max-width: 1280px;
   }
 }

@@ -1,3 +1,19 @@
 .hero {
-  padding: calc(64px + $header-height) 0;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: flex-end;
+
+  &__title {
+    grid-column: 1/-1;
+    padding-bottom: 26px;
+
+    @include bp(md) {
+      padding-bottom: 48px;
+    }
+
+    @include bp(xl) {
+      grid-column: 1/-4;
+    }
+  }
 }
