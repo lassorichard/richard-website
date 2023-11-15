@@ -46,17 +46,19 @@ body {
   transform: rotate(-7deg);
 }
 
-.heading-1 {
+.heading {
   color: $cw;
-  font-size: var(--font-size-h1);
-  font-weight: $font-weight-regular;
-  line-height: 1.2;
-}
 
-.heading-2 {
-  color: $cw;
-  font-size: var(--font-size-h2);
-  font-weight: $font-weight-light;
+  &--h1 {
+    font-size: var(--font-size-h1);
+    font-weight: $font-weight-regular;
+    line-height: 1.2;
+  }
+
+  &--h2 {
+    font-size: var(--font-size-h2);
+    font-weight: $font-weight-light;
+  }
 }
 
 .paragraph {

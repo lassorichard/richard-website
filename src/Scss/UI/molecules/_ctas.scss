@@ -1,17 +1,17 @@
-.btn {
-  -moz-appearance: none;
-  -webkit-appearance: none;
+.cta {
   background: none;
   border-radius: 30px;
   border: none;
+  color: currentColor;
   cursor: pointer;
   font-weight: $font-weight-semibold;
+  min-width: 120px;
   padding: 15px 20px;
   text-decoration: none;
   transition: ease .2s;
-  min-width: 120px;
 
-  &:hover, &:active {
+  &:hover,
+  &:active {
     opacity: 0.8;
   }
 
@@ -23,5 +23,14 @@
   &--secondary {
     color: $cg1;
     font-weight: $font-weight-light;
+  }
+
+  &--navigation {
+    font-size: 60px;
+    text-decoration: underline;
+
+    @include bp(lg) {
+      font-size: 24px;
+    }
   }
 }

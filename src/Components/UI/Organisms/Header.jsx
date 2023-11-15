@@ -1,16 +1,15 @@
 
-import { SwitchButton } from '../Atoms/SwitchButton'
 import { Logo } from '../Molecules/Logo'
+import { Menu } from '../Molecules/Menu';
 
 export const Header = () => {
+  const blockClass = 'header';
   return (
     <>
-      <header className="header">
-        <div className="header__container container">
+      <header className={blockClass}>
+        <div className={`${blockClass}__wrapper container`}>
           <Logo />
-          <SwitchButton
-            classes= 'header__switch-button switch'
-          />
+          <Menu />
         </div>
       </header>
     </>

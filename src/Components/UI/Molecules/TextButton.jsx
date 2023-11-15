@@ -1,21 +1,9 @@
-import useCopy from 'use-copy'
 import { Button } from '../Atoms/Button'
 import { Heading1 } from '../Atoms/Heading1'
 import { Paragraph } from '../Atoms/Paragraph'
 import { PopUpSmall } from '../Atoms/PopUpSmall'
 
 export const TextButton = () => {
-
-  const [copied, copy, setCopied] = useCopy("lasso_1995@hotmail.com");
-
-  function handlePopUp() {
-    copy();
-
-    setTimeout(() => {
-      setCopied(false)
-    }, 3000);
-  };
-
   return (
     <section className='text-button container'>
       <Heading1
@@ -27,7 +15,7 @@ export const TextButton = () => {
         text={"If you're looking for a freelance developer to help bring and idea to life and you're on a tight timeline -- let's jam."}
       />
       <div className="text-button__ctas">
-        <div onClick={handlePopUp}>
+        <div>
           <Button
             text={'lasso_1995@hotmail.com'}
             type={'primary'}
@@ -40,7 +28,7 @@ export const TextButton = () => {
           />
         </a>
       </div>
-      {copied ? <PopUpSmall text={'Copy to clipboard'} /> : null}
+      <PopUpSmall text={'Copy to clipboard'} />
     </section>
   )
 }

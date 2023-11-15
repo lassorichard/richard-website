@@ -1,5 +1,6 @@
 .header {
-  height: $header-height;
+  backdrop-filter: blur(4px);
+  background: rgba($cb, 0.2);
   left: 0;
   position: fixed;
   right: 0;
@@ -7,9 +8,10 @@
   width: 100vw;
   z-index: 100;
 
-  &__container {
+  &__wrapper {
     align-items: center;
     display: flex;
+    height: $header-height;
     justify-content: space-between;
   }
 }

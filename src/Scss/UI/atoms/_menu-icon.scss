@@ -1,0 +1,81 @@
+.menu-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 36px;
+
+  @include bp(lg) {
+    display: none;
+  }
+
+  span {
+    background: $cw;
+    border-radius: 3px;
+    display: block;
+    height: 2px;
+    width: 34px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &:nth-child(2) {
+      width: 24px;
+    }
+  }
+}
+
+.open span,
+.close span {
+  transition: ease all .6s;
+}
+
+
+
+.open {
+  z-index: 300;
+
+  span {
+
+    &:first-child,
+    &:last-child {
+      width: 22px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    &:first-child {
+      transform: rotate(-40deg) translate(-1px, -1px);
+    }
+
+    &:last-child {
+      transform: rotate(40deg) translate(-1px, 1px);
+    }
+
+    &:nth-child(2) {
+      width: 34px;
+    }
+  }
+}
+
+.close span {
+
+  &:first-child,
+  &:last-child {
+    width: 34px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  &:first-child {
+    transform: rotate(0) translate(-1px, -1px);
+  }
+
+  &:last-child {
+    transform: rotate(0) translate(-1px, 1px);
+  }
+}

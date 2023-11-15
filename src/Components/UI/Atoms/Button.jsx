@@ -1,7 +1,5 @@
-
-
 export const Button = ({ text, type = '' }) => {
   return (
-    <button className={`btn btn--${type}`}>{text}</button>
+    <button className={`cta cta--${type}`}>{text}</button>
   )
 }
