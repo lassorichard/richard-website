@@ -1,4 +1,4 @@
-import { Heading2 } from "../Atoms/Heading2"
+import { Heading } from "../Atoms/Heading"
 
 export const Prompt = () => {
   return (
@@ -6,7 +6,7 @@ export const Prompt = () => {
       <div className="prompt__container container">
         <form className="prompt__form">
           <label>
-            <Heading2
+            <Heading
               text="How much is your budget?"
               extraClass="prompt__heading"
             />

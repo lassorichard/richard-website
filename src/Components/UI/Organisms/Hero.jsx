@@ -1,5 +1,6 @@
 import { Background } from "../Atoms/Background";
-import { Heading1 } from "../Atoms/Heading1"
+import { Heading } from "../Atoms/Heading"
+import HeroImage from "../../../Assets/Images/hero-bg.jpg"
 
 export const Hero = () => {
   const blockClass = "hero";
@@ -7,14 +8,16 @@ export const Hero = () => {
   return (
     <section className={blockClass}>
       <div className={`${blockClass}__wrapper container`}>
-        <Heading1
+        <Heading
+          level="h1"
+          cssLevel="h1"
           extraClass={`${blockClass}__title`}
           text={'A decade of strategising and designing brands'}
+          color='#F6F7F8'
         />
       </div>
       <Background
-        image='https://fastly.picsum.photos/id/339/4752/3168.jpg?hmac=U_eb-zX4p02iRWKyDTGjkCUj6w42cRGinkHolnqPfuc'
-        color='#000'
+        image={HeroImage}
       />
     </section>
   )

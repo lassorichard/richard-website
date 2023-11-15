@@ -20,12 +20,14 @@
 @import './UI/atoms/container';
 @import './UI/atoms//background';
 @import './UI/atoms/switch-button';
-@import './UI/atoms/button';
 @import './UI/atoms/popup-small';
+@import './UI/atoms/menu-icon';
 
 // Molecules
 @import './UI/molecules/logo';
 @import './UI/molecules/text-button';
+@import './UI/molecules/menu';
+@import './UI/molecules/ctas';
 
 // Organisms
 @import './UI/organisms//header';
