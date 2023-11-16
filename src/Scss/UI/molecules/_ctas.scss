@@ -1,12 +1,10 @@
 .cta {
   background: none;
-  border-radius: 30px;
   border: none;
   color: currentColor;
   cursor: pointer;
   font-weight: $font-weight-semibold;
   min-width: 120px;
-  padding: 15px 20px;
   text-decoration: none;
   transition: ease .2s;
 
@@ -17,7 +15,10 @@
 
   &--primary {
     background: $cw;
+    border-radius: 30px;
+    border: 1px solid $cb;
     color: $cb;
+    padding: 15px 20px;
   }
 
   &--secondary {
@@ -27,10 +28,15 @@
 
   &--navigation {
     font-size: 60px;
-    text-decoration: underline;
+    font-weight: $font-weight-light;
 
     @include bp(lg) {
       font-size: 24px;
+      text-decoration: underline;
     }
+  }
+
+  &--icon {
+    padding: 0;
   }
 }

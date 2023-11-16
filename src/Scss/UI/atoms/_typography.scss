@@ -1,26 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat&family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 // Font Family
 $font-caveat: 'Caveat', cursive;
-$font-source: 'Source Sans Pro', sans-serif;
+$font-family: 'Urbanist', sans-serif;
 
 // Font Weight
 $font-weight-light: 300;
-$font-weight-regular: 400;
-$font-weight-semibold: 600;
-$font-weight-bold: 700;
+$font-weight-regular: 500;
+$font-weight-semibold: 700;
+$font-weight-bold: 900;
 
 // Font Size
 :root {
-  --font-size-h1: 40px;
-  --font-size-h2: 32px;
+  --font-size-h1: 42px;
+  --font-size-h2: 38px;
   --font-size-h3: 28px;
   --font-size-h4: 24px;
   --font-size-h5: 20px;
 
-  --font-size-body-large: 18px;
-  --font-size-body-regular: 16px;
-  --font-size-body-small: 12px;
+  --font-size-p-large: 18px;
+  --font-size-p-regular: 16px;
+  --font-size-p-small: 12px;
   --font-size-eyebrow: 16px;
 
   @include bp(md) {
@@ -35,7 +36,7 @@ $font-weight-bold: 700;
 // Font sizes
 
 body {
-  font-family: $font-source;
+  font-family: $font-family;
 }
 
 .logo-heading {
@@ -57,14 +58,41 @@ body {
 
   &--h2 {
     font-size: var(--font-size-h2);
-    font-weight: $font-weight-light;
+    font-weight: $font-weight-semibold;
   }
 }
 
 .paragraph {
-  color: $cg1;
-  font-size: 16px;
-  line-height: 1.33;
+  color: $cb;
+
+  &--size-small {
+    font-size: var(--font-p-small);
+  }
+  
+  &--size-regular {
+    font-size: var(--font-p-regular);
+    line-height: 1.33;
+  }
+
+  &--size-large {
+    font-size: var(--font-p-large);
+  }
+
+  &--weight-light {
+    font-weight: $font-weight-light;
+  }
+
+  &--weight-regular {
+    font-weight: $font-weight-regular;
+  }
+
+  &--weight-semibold {
+    font-weight: $font-weight-semibold;
+  }
+
+  &--weight-bold {
+    font-weight: $font-weight-bold;
+  }
 }
 
 .input-text {

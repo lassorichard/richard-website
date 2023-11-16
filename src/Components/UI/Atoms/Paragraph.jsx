@@ -1,10 +1,8 @@
 
-export const Paragraph = ({ text, extraClass = '' }) => {
+export const Paragraph = ({ text, size = 'regular', weight = 'regular', customClass = '' }) => {
+  const customCssClass = `${customClass}__paragraph`;
+
   return (
-    <>
-      <p className={`paragraph ${extraClass}`}>
-        {text}
-      </p>
-    </>
+    <p className={`${customCssClass} paragraph paragraph--size-${size} paragraph--weight-${weight}`}>{text}</p>
   )
 }

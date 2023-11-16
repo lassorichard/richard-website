@@ -1,5 +1,14 @@
-export const Anchor = ({ text, type = '', href }) => {
+export const Anchor = ({ text, type = '', href, img, altText, customClass = '' }) => {
+  const customCssClass = `${customClass}__cta`
   return (
-    <a href={href} className={`cta cta--${type}`}>{text}</a>
+    <>
+      {type === 'icon' ? (
+        <a href={href} className={`cta cta--${type} ${customCssClass}`}>
+          <img src={img} alt={altText} />
+        </a>
+      ) : (
+        <a href={href} className={`cta cta--${type}`}>{text}</a>
+      )}
+    </>
   )
 }
