@@ -4,12 +4,27 @@
   height: 100vh;
   position: relative;
 
-  &__title {
+  &__wrapper {
+    @include bp(lg) {
+      align-items: flex-end;
+    }
+  }
+
+  &__heading {
     grid-column: 1/-1;
     padding-bottom: 48px;
 
-    @include bp(xl) {
+    @include bp(lg) {
       grid-column: 1/-4;
+    }
+  }
+
+  &__cta {
+    margin-bottom: 48px;
+    animation: pulse 1.5s ease-in-out infinite;
+
+    @include bp(lg) {
+      grid-column: -1/-1;
     }
   }
 }
