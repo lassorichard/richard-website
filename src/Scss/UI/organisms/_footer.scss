@@ -1,0 +1,47 @@
+.footer {
+  background: $cb;
+  padding: 60px 0 20px;
+
+  &__wave {
+    margin-bottom: -3px;
+  }
+
+  &__wrapper {
+    align-items: center;
+    color: $cw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__logo {
+    margin-bottom: 40px;
+  }
+
+  &__nav-wrapper {
+    column-gap: 16px;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+    @include bp(lg) {
+      max-width: 300px;
+    }
+
+    .cta {
+      font-weight: 300;
+      text-decoration: underline;
+    }
+  }
+
+  &__nav-item {
+    font-weight: 400;
+  }
+
+  &__rights {
+    border-top: solid 1px $cg1;
+    font-size: 14px;
+    font-weight: 100;
+    padding-top: 20px;
+    text-align: center;
+  }
+}

@@ -13,7 +13,7 @@
     width: 400px;
   }
 
-  @include bp(lg) {
+  @include bp(md) {
     backdrop-filter: none;
     background-color: transparent;
     height: 100%;
@@ -46,7 +46,7 @@
       opacity 1s ease;
   }
 
-  &__wrapper {
+  &__nav-wrapper {
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -55,14 +55,24 @@
     justify-content: center;
     padding: 50px;
 
-    @include bp(lg) {
+    @include bp(md) {
       flex-direction: row;
       padding: initial;
     }
   }
 
-  &__item {
+  &__nav-item {
     color: $cw;
+
+    .cta {
+      font-size: 60px;
+      font-weight: $font-weight-light;
+
+      @include bp(md) {
+        font-size: 24px;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
@@ -76,7 +86,7 @@
   transform: translateX(100%);
   transition: ease transform .5s;
 
-  @include bp(lg) {
+  @include bp(md) {
     transform: initial;
   }
 }

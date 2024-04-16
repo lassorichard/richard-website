@@ -1,27 +1,21 @@
-import { Background } from "../Atoms/Background";
-import { Heading } from "../Atoms/Heading"
-import { Ctas } from "../Molecules/Ctas";
-import HeroImage from "../../../Assets/Images/hero-bg.jpg"
-import ArrowDown from "../../../Assets/Images/arrowdown.webp"
+import React from "react";
 
-export const Hero = ({ id }) => {
+export const Hero = ({ id, elements, size = 'large', alignContent = 'left', customClass, background }) => {
   const blockClass = "hero";
+  const customCssClass = `${customClass}__${blockClass} ${blockClass}__size--${size} ${blockClass}__align-content--${alignContent}`;
+
+  const renderElements = (elements) => (
+    elements && elements.length > 0
+      ? elements.map((element, index) => <React.Fragment key={index}>{element}</React.Fragment>)
+      : null
+  );
 
   return (
-    <section className={blockClass} id={id}>
+    <section className={`${blockClass} ${customCssClass}`} id={id}>
       <div className={`${blockClass}__wrapper container`}>
-        <Heading
-          level="h1"
-          cssLevel="h1"
-          customClass={blockClass}
-          text={'A decade of strategising and designing brands'}
-          color='#F6F7F8'
-        />
-        <Ctas customClass={blockClass} type='anchor' href='#home-intro' theme='icon' img={ArrowDown} altText="Go to next section" />
+        {renderElements(elements)}
       </div>
-      <Background
-        image={HeroImage}
-      />
+      {background}
     </section>
   )
 }

@@ -1,0 +1,55 @@
+.three-columns {
+  padding-block: 46px;
+
+  @include bp(md) {
+    padding-block: 100px;
+  }
+
+  &__wrapper {
+    row-gap: 40px;
+  }
+
+  &__first {
+    grid-column: 1/-1;
+
+    @include bp(md) {
+      grid-column: 1/span 4;
+    }
+
+    @include bp(lg) {
+      grid-column: 1/span 4;
+    }
+  }
+
+  &__second {
+    grid-column: 1/-1;
+
+    @include bp(md) {
+      grid-column: 5/span 4;
+    }
+
+    @include bp(lg) {
+      grid-column: 5/span 4;
+    }
+  }
+
+  &__third {
+    grid-column: 1/-1;
+
+    @include bp(md) {
+      grid-column: 3/span 4;
+    }
+
+    @include bp(lg) {
+      grid-column: 9/span 4;
+    }
+  }
+
+  &__heading {
+    padding-bottom: 16px;
+  }
+
+  &__paragraph:last-child {
+    padding-bottom: 24px;
+  }
+}

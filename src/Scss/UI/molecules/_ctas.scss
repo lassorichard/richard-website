@@ -7,6 +7,7 @@
   min-width: 120px;
   text-decoration: none;
   transition: ease .2s;
+  width: max-content;
 
   &:hover,
   &:active {
@@ -26,13 +27,22 @@
     font-weight: $font-weight-light;
   }
 
-  &--navigation {
-    font-size: 60px;
-    font-weight: $font-weight-light;
+  &--tertiary {
+    color: $cb;
+    display: flex;
+    padding: 12px 8px 12px 0;
 
-    @include bp(lg) {
-      font-size: 24px;
-      text-decoration: underline;
+    span {
+      margin-right: 8px;
+      white-space: nowrap;
+    }
+
+    .icon {
+      transition: ease transform 0.3s;
+    }
+
+    &:hover .icon {
+      transform: translateX(4px);
     }
   }
 

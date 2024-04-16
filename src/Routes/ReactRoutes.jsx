@@ -1,20 +1,14 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Home } from '../Components/Pages/Home';
-import { Budget } from '../Components/Pages/Budget';
-import { Header } from '../Components/UI/Organisms/Header';
+import { BrowserRouter } from 'react-router-dom';
+import { Footer } from '../Components/UI/Organisms/Footer';
+import { AnimatedRoutes } from './AnimatedRoutes';
 
 export const ReactRoutes = () => {
   return (
     <>
-      <Header />
       <BrowserRouter>
-        <Routes>
-          <Route exact path="/" element={<Home />} />
-          <Route exact path="/budget" element={<Budget />} />
-          <Route exact path="/contact" element={<Home />} />
-          {/* <Route path="*" element={<NotFound />} /> */}
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
+      <Footer />
     </>
   )
 };

@@ -1,0 +1,44 @@
+.showcase {
+  padding-block: 46px;
+
+  @include bp(sm) {
+    padding-block: 100px;
+  }
+
+  &__cta,
+  &__heading,
+  &__grid {
+    grid-column: 1/-1;
+
+    @include bp(xl) {
+      grid-column: 2/span 3;
+    }
+  }
+
+  &__heading {
+    margin-bottom: 24px;
+    text-align: center;
+
+    @include bp(sm) {
+      grid-column: 1/span 3;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    @include bp(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include bp(md) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include bp(xl) {
+      grid-column: 1/-1;
+    }
+  }
+}
