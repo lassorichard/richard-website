@@ -89,7 +89,31 @@ export const Home = () => {
             />
           ]}
         />
-        <Showcase id='home-showcase' />
+        <Showcase
+          id='home-showcase'
+          heading={
+            <Heading
+              level="h2"
+              cssLevel="h1"
+              customClass='showcase'
+              text={'Showcase'}
+              color="#f9f9f9"
+            />
+          }
+          background={
+            <Background
+              color='#4c4c4c'
+              borderTopRadius={[
+                'left',
+                'right'
+              ]}
+              borderBottomRadius={[
+                'left',
+                'right'
+              ]}
+            />
+          }
+        />
         <TwoColumns
           id='home-contact-banner'
           backgroundColor='#d7d7d7d'
