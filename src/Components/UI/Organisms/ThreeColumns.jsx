@@ -1,13 +1,12 @@
-import React from "react";
 import { Background } from "../Molecules/Background";
 
-export const TwoColumns = ({ id, firstColumnElements, secondColumnElements, backgroundColor }) => {
-  const blockClass = "two-columns";
+export const ThreeColumns = ({ id, firstColumnElements, secondColumnElements, thirdColumnElements, backgroundColor }) => {
+  const blockClass = "three-columns";
 
   const renderColumnElements = (elements) => (
     elements && elements.length > 0
       ? elements.map((element, index) => (
-        <React.Fragment key={index}>{element}</React.Fragment>
+        <div key={index}>{element}</div>
       ))
       : null
   );
@@ -21,7 +20,9 @@ export const TwoColumns = ({ id, firstColumnElements, secondColumnElements, back
         <div className={`${blockClass}__second`}>
           {renderColumnElements(secondColumnElements)}
         </div>
-
+        <div className={`${blockClass}__third`}>
+          {renderColumnElements(thirdColumnElements)}
+        </div>
       </div>
       <Background
         color={backgroundColor}

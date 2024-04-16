@@ -1,0 +1,8 @@
+.works {
+  &__title {
+    background: $cb2;
+    color: $cw;
+    padding: 20px 10px;
+    font-size: var(--font-size-h5);
+  }
+}

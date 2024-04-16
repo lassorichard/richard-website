@@ -1,0 +1,16 @@
+.justify-content {
+  $modifiers: (
+    flex-start,
+    flex-end,
+    center,
+    space-between,
+    space-around,
+    space-evenly
+  );
+
+  @each $modifier in $modifiers {
+    &--#{$modifier} {
+      justify-content: $modifier;
+    }
+  }
+}

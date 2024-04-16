@@ -1,6 +1,6 @@
 import { MenuIcon } from "../Atoms/MenuIcon"
 import { useState } from "react";
-import { Ctas } from "./Ctas";
+import { Navigation } from "../Atoms/Navigation";
 
 export const Menu = () => {
   const [menuState, setMenuState] = useState(false);
@@ -15,17 +15,7 @@ export const Menu = () => {
   return (
     <>
       <nav className={`${blockClass}${toogleClass}`}>
-        <ul className={`${blockClass}__wrapper${toogleClass}`}>
-          <li className={`${blockClass}__item`}>
-            <Ctas type='anchor' href='/' text='Home' theme='navigation' />
-          </li>
-          <li className={`${blockClass}__item`}>
-            <Ctas type='anchor' href='/budget' text='Portfolio' theme='navigation' />
-          </li>
-          <li className={`${blockClass}__item`}>
-            <Ctas type='anchor' href='/' text='Contact' theme='navigation' />
-          </li>
-        </ul>
+        <Navigation blockClass={blockClass}/>
       </nav>
       <div className={`${blockClass}__backdrop${toogleClass}`}></div>
       <MenuIcon

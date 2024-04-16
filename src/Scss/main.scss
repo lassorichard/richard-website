@@ -22,19 +22,25 @@
 @import './UI/atoms/switch-button';
 @import './UI/atoms/popup-small';
 @import './UI/atoms/menu-icon';
+@import './UI/atoms/justify-content';
 
 // Molecules
 @import './UI/molecules/logo';
 @import './UI/molecules/text-button';
 @import './UI/molecules/menu';
 @import './UI/molecules/ctas';
+@import './UI/molecules/works';
 
 // Organisms
 @import './UI/organisms//header';
+@import './UI/organisms//footer';
 @import './UI/organisms//hero';
 @import './UI/organisms/prompt';
 @import './UI/organisms/two-columns';
+@import './UI/organisms/three-columns';
+@import './UI/organisms/showcase';
 
 // Pages
 @import './pages/home';
 @import './pages/budget';
+@import './pages/contact';
