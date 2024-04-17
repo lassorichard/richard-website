@@ -97,6 +97,7 @@ export const Home = () => {
         />
         <Showcase
           id='home-showcase'
+          viewAllButton={true}
           heading={
             <Heading
               level="h2"
