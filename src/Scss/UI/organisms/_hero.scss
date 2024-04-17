@@ -3,6 +3,7 @@
 
   display: flex;
   justify-content: center;
+  justify-content: center;
   position: relative;
 
   .cta {
@@ -81,6 +82,26 @@
       align-items: center;
     }
 
+    #{$self}__first-column {
+      grid-column: 1/-1;
+
+      @include bp(md) {
+        grid-column: 1/4;
+      }
+
+      @include bp(lg) {
+        grid-column: 1/6;
+      }
+    }
+
+    .cta {
+      display: none;
+
+      @include bp(md) {
+        display: block;
+      }
+    }
+
     .heading {
       grid-column: 1/-1;
       padding-bottom: 48px;
@@ -88,12 +109,10 @@
 
     &--animation {
       .heading {
-        grid-column: 1/-1;
         padding-bottom: 48px;
         text-align: center;
 
         @include bp(md) {
-          grid-column: 1/4;
           text-align: left;
         }
 
@@ -111,7 +130,7 @@
         }
 
         @include bp(lg) {
-          grid-column: 8/-1;
+          grid-column: 7/-1;
         }
       }
     }

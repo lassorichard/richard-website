@@ -14,7 +14,7 @@ export const Hero = ({ id, elements, size = 'large', alignContent = 'center', ju
   return (
     <section className={`${blockClass} ${customCssClass}`} id={id}>
       <div className={`${blockClass}__wrapper container ${hasAnimation}`}>
-        <div>
+        <div className={`${blockClass}__first-column`}>
           {renderElements(elements)}
         </div>
         {animation}
