@@ -24,7 +24,8 @@ export const Contact = () => {
         <Hero
           id='home-hero'
           size="medium"
-          alignContent="center"
+          justifyContent="center"
+          alignContent="end"
           customClass={blockClass}
           elements={[
             <Heading

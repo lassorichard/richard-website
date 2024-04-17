@@ -11,6 +11,8 @@ export const Portfolio = () => {
       <Hero
         id='portfolio-hero'
         customClass={blockClass}
+        justifyContent="center"
+        alignContent="end"
         size="medium"
         elements={[
           <Heading

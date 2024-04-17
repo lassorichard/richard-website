@@ -1,8 +1,9 @@
 import React from "react";
 
-export const Hero = ({ id, elements, size = 'large', alignContent = 'left', customClass, background }) => {
+export const Hero = ({ id, elements, size = 'large', alignContent = 'center', justifyContent = 'left', customClass, background, animation }) => {
   const blockClass = "hero";
-  const customCssClass = `${customClass}__${blockClass} ${blockClass}__size--${size} ${blockClass}__align-content--${alignContent}`;
+  const customCssClass = `${customClass}__${blockClass} ${blockClass}__size--${size} ${blockClass}__align-content--${alignContent} ${blockClass}__justify-content--${justifyContent}`;
+  const hasAnimation = animation ? `${blockClass}__wrapper--animation` : ''
 
   const renderElements = (elements) => (
     elements && elements.length > 0
@@ -12,8 +13,11 @@ export const Hero = ({ id, elements, size = 'large', alignContent = 'left', cust
 
   return (
     <section className={`${blockClass} ${customCssClass}`} id={id}>
-      <div className={`${blockClass}__wrapper container`}>
-        {renderElements(elements)}
+      <div className={`${blockClass}__wrapper container ${hasAnimation}`}>
+        <div>
+          {renderElements(elements)}
+        </div>
+        {animation}
       </div>
       {background}
     </section>

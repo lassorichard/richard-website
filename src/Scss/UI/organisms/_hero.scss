@@ -1,14 +1,9 @@
 .hero {
   $self: &;
 
-  align-items: flex-end;
   display: flex;
+  justify-content: center;
   position: relative;
-
-  .heading {
-    grid-column: 1/-1;
-    padding-bottom: 48px;
-  }
 
   .cta {
     margin-bottom: 48px;
@@ -25,7 +20,11 @@
     }
 
     &--medium {
-      height: 460px;
+      height: 280px;
+
+      @include bp(lg) {
+        height: 460px;
+      }
     }
 
     &--small {
@@ -34,6 +33,20 @@
   }
 
   &__align-content {
+    &--top {
+      align-items: flex-start;
+    }
+
+    &--center {
+      align-items: center;
+    }
+
+    &--end {
+      align-items: flex-end;
+    }
+  }
+
+  &__justify-content {
     &--left {
       .heading {
         @include bp(lg) {
@@ -65,7 +78,42 @@
 
   &__wrapper {
     @include bp(lg) {
-      align-items: flex-end;
+      align-items: center;
+    }
+
+    .heading {
+      grid-column: 1/-1;
+      padding-bottom: 48px;
+    }
+
+    &--animation {
+      .heading {
+        grid-column: 1/-1;
+        padding-bottom: 48px;
+        text-align: center;
+
+        @include bp(md) {
+          grid-column: 1/4;
+          text-align: left;
+        }
+
+        @include bp(lg) {
+          grid-column: 1/6;
+        }
+      }
+
+      .animation {
+        grid-column: 1/-1;
+        max-width: 600px;
+
+        @include bp(md) {
+          grid-column: 5/-1;
+        }
+
+        @include bp(lg) {
+          grid-column: 8/-1;
+        }
+      }
     }
   }
 }

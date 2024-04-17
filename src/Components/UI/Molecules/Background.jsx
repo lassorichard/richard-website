@@ -1,4 +1,6 @@
-export const Background = ({ color, image, borderTopRadius = [], borderBottomRadius = [] }) => {
+import { Stars } from "../Atoms/Stars";
+
+export const Background = ({ color, image, borderTopRadius = [], borderBottomRadius = [], stars }) => {
   const blockClass = 'background';
   const hasBackgroundImage = image ? `${blockClass}__image` : '';
 
@@ -16,6 +18,8 @@ export const Background = ({ color, image, borderTopRadius = [], borderBottomRad
   };
 
   return (
-    <div className={`${blockClass} ${hasBackgroundImage} ${borderTopClasses} ${borderBottomClasses}`} style={styles}></div>
+    <div className={`${blockClass} ${hasBackgroundImage} ${borderTopClasses} ${borderBottomClasses}`} style={styles}>
+      {stars ? <Stars count={200} /> : null}
+    </div>
   )
 };

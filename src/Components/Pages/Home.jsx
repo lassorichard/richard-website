@@ -5,10 +5,10 @@ import { Ctas } from "../UI/Molecules/Ctas";
 import { Hero } from "../UI/Organisms/Hero";
 import { Showcase } from "../UI/Organisms/Showcase";
 import { TwoColumns } from "../UI/Organisms/TwoColumns";
-import ArrowDown from "../../Assets/Images/arrowdown.webp"
 import { Background } from "../UI/Molecules/Background";
-import HeroImage from "../../Assets/Images/hero-bg.jpg";
 import { motion } from "framer-motion";
+import { Astronaut } from "../UI/Atoms/Astronaut";
+import ArrowDown from "../../Assets/Images/arrowdown.webp"
 
 export const Home = () => {
   const blockClass = "home"
@@ -24,6 +24,7 @@ export const Home = () => {
         <Hero
           id='home-hero'
           customClass={blockClass}
+          alignContent="center"
           elements={[
             <Heading
               level="h1"
@@ -39,15 +40,20 @@ export const Home = () => {
               theme='icon'
               img={ArrowDown}
               altText="Go to next section" />
+
           ]}
           background={
             <Background
-              image={HeroImage}
+              color='#222222'
+              stars={true}
               borderBottomRadius={[
                 'left',
                 'right'
               ]}
             />
+          }
+          animation={
+            <Astronaut />
           }
         />
         <TwoColumns
@@ -102,7 +108,7 @@ export const Home = () => {
           }
           background={
             <Background
-              color='#4c4c4c'
+              color="#4c4c4c"
               borderTopRadius={[
                 'left',
                 'right'
