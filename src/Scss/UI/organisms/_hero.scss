@@ -82,18 +82,6 @@
       align-items: center;
     }
 
-    #{$self}__first-column {
-      grid-column: 1/-1;
-
-      @include bp(md) {
-        grid-column: 1/4;
-      }
-
-      @include bp(lg) {
-        grid-column: 1/6;
-      }
-    }
-
     .cta {
       display: none;
 
@@ -107,7 +95,23 @@
       padding-bottom: 48px;
     }
 
+    #{$self}__first-column {
+      grid-column: 1/-1;
+    }
+
     &--animation {
+      #{$self}__first-column {
+        grid-column: 1/-1;
+
+        @include bp(md) {
+          grid-column: 1/4;
+        }
+
+        @include bp(lg) {
+          grid-column: 1/6;
+        }
+      }
+
       .heading {
         padding-bottom: 48px;
         text-align: center;
