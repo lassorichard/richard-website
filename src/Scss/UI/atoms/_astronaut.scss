@@ -1,0 +1,21 @@
+.astronaut {
+  &__planet {
+    animation: up-down 1.5s cubic-bezier(0.6, -0.28, 0.74, 0.05) infinite;
+  }
+
+  &__hand {
+    animation: up-down-fixed 1.5s cubic-bezier(0.6, -0.28, 0.74, 0.05) infinite;
+  }
+}
+
+@keyframes up-down {
+  0% { transform: translateY(-2000px); }
+  50% { transform: translate(-400px, 2000px); }
+  100% { transform: translateY(-2000px); }
+}
+
+@keyframes up-down-fixed {
+  0% { transform: translateY(0); }
+  50% { transform: translate(310px, 800px) }
+  100% { transform: translateY(0); }
+}
