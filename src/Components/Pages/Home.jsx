@@ -44,7 +44,7 @@ export const Home = () => {
           ]}
           background={
             <Background
-              color='#222222'
+              color='#000020'
               stars={true}
               borderBottomRadius={[
                 'left',

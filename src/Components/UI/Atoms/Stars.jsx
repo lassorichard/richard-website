@@ -12,7 +12,7 @@ export const Stars = ({ count }) => {
     };
 
     const drawStars = () => {
-      const tmpStar = document.createElement('figure');
+      const tmpStar = document.createElement('div');
       tmpStar.className = "star";
       tmpStar.style.top = `${100 * Math.random()}%`;
       tmpStar.style.left = `${100 * Math.random()}%`;
