@@ -1,8 +1,6 @@
 import { Ctas } from "../Molecules/Ctas";
 import { Works } from "../Molecules/Works";
-import Work1 from "../../../Assets/Images/work-1.jpeg"
-import Work2 from "../../../Assets/Images/work-2.jpg"
-import Work3 from "../../../Assets/Images/work-3.jpeg"
+import DrumKit from "../../../Assets/Images/drum-kit-bg.jpg"
 
 export const Showcase = ({ id, heading, background, viewAllButton }) => {
   const blockClass = "showcase";
@@ -12,12 +10,7 @@ export const Showcase = ({ id, heading, background, viewAllButton }) => {
       <div className={`${blockClass}__wrapper container`}>
         {heading}
         <div className={`${blockClass}__grid`}>
-          <Works title='Phoenox Textiles' href='/' src={Work1} />
-          <Works title='Phoenox Textiles' href='/' src={Work2} />
-          <Works title='Phoenox Textiles' href='/' src={Work3} />
-          <Works title='Phoenox Textiles' href='/' src={Work1} />
-          <Works title='Phoenox Textiles' href='/' src={Work2} />
-          <Works title='Phoenox Textiles' href='/' src={Work3} />
+          <Works title='Phoenox Textiles' href='/portfolio/drum-kit' src={DrumKit} />
         </div>
         {
           viewAllButton

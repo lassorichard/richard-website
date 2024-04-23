@@ -1,0 +1,1 @@
+export const soundPath = (name) => `../../../Assets/Sounds/${name.toLowerCase()}.wav`;
