@@ -9,9 +9,14 @@ import { Background } from "../UI/Molecules/Background";
 import { motion } from "framer-motion";
 import { Astronaut } from "../UI/Atoms/Astronaut";
 import ArrowDown from "../../Assets/Images/arrowdown.webp"
+import { useEffect } from "react";
 
 export const Home = () => {
   const blockClass = "home"
+
+  useEffect(() => {
+    document.title = "Hi, I'm Richard, web Developer";
+  }, []);
 
   return (
     <>
@@ -44,7 +49,7 @@ export const Home = () => {
           ]}
           background={
             <Background
-              color='#000020'
+              color='#4c4c4c'
               stars={true}
               borderBottomRadius={[
                 'left',
@@ -80,7 +85,7 @@ export const Home = () => {
                   customClass='two-columns'
                 />,
                 <Paragraph
-                  text="As you journey through these virtual corridors, you'll discover a world where creativity knows no bounds and innovation reigns supreme. From sleek user interfaces to interactive web applications, I thrive on pushing the boundaries of what's possible in the digital realm."
+                  text="As your journey through these virtual corridors, you'll discover a world where creativity knows no bounds and innovation reigns supreme. From sleek user interfaces to interactive web applications, I thrive on pushing the boundaries of what's possible in the digital realm."
                   customClass='two-columns'
                 />,
                 <Ctas

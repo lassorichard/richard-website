@@ -9,9 +9,14 @@ import { ThreeColumns } from "../UI/Organisms/ThreeColumns"
 import ContactImage from "../../Assets/Images/contact-bg.jpg"
 import CV from "../../Assets/Files/cv.pdf"
 import { motion } from "framer-motion";
+import { useEffect } from "react"
 
 export const Contact = () => {
   const blockClass = "contact"
+
+  useEffect(() => {
+    document.title = "Contact | Richard's Website";
+  }, []);
 
   return (
     <>

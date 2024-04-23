@@ -50,6 +50,8 @@ export const DrumKit = () => {
   useEffect(() => {
     const handleKeyDown = handleKeyPress;
     document.addEventListener('keydown', handleKeyDown);
+    document.title = "Drum kit | Richard's Website";
+
     return () => {
       document.removeEventListener('keydown', handleKeyDown);
     };
